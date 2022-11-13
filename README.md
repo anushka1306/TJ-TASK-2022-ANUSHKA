@@ -1,4 +1,5 @@
 # TJ-TASK-2022-ANUSHKA
+**Question 1:**
 import java.util.*;
 //importing util package
 class powerof2
@@ -63,4 +64,4 @@ class powerof2
 ![2022-11-13 (1)](https://user-images.githubusercontent.com/118106624/201517926-00252f95-c6b6-4b6e-ba07-42aaf8dae788.png)
 ![2022-11-13 (2)](https://user-images.githubusercontent.com/118106624/201517934-b9670c5e-04bf-4738-931c-6c70b675e218.png)
 ![2022-11-13 (3)](https://user-images.githubusercontent.com/118106624/201517944-6de6663e-22cc-4812-adbb-b872f17cefaa.png)
-
+**end of Question 1**
