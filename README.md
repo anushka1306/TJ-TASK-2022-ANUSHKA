@@ -86,4 +86,102 @@ class Solution {
     }
 }
 **end of question 4**
-**end of DSA-CP easy tasks**
+**end of DSA easy tasks**
+**DSA medium tasks:**
+**Quetion 1:**
+class Solution {
+    public int longestSubarray(int[] nums) {
+        int max = 0;
+        for (int i : nums) {
+            if (i > max) max = i;
+        }
+        
+        int maxLen = 0, currLen = 0;
+        
+        for (int n : nums) {
+            if (n == max) currLen++;
+            else currLen = 0;
+            maxLen = Math.max(maxLen, currLen);
+        }
+        
+        return maxLen;
+    }
+}
+![image](https://user-images.githubusercontent.com/118106624/201625145-a8de33f5-f552-43d0-8c50-99ae876b3d6e.png)
+**end of question 1**	
+**Question 2:**
+class Solution {
+    public int minGroups(int[][] intervals) {
+        int[] count = new int[1000002];
+        
+        for(int[] in : intervals){
+            count[in[0]]++;
+            count[in[1]+1]--;
+        }
+        
+        int max = 0;
+            
+        for(int i = 1; i < 1000002; i++){
+            count[i] += count[i-1];
+            max = Math.max(max, count[i]);
+        }
+        
+        return max;
+    }
+}
+![image](https://user-images.githubusercontent.com/118106624/201626703-d76b556a-43e2-499b-ba98-72ab74555ad7.png)	
+**end of question 2**	
+**Question 3:**
+class Pair{
+    String name="";
+    String id="";
+    long view=0L;
+    long maxi=0;
+    Pair(String name,String id,int vi){
+        this.name=name;
+        this.id=id;
+        view=vi;
+        maxi=Math.max(maxi,vi); // to get to know whether the pariticular creator's id has the maximum view so as to get lexicographically smallest id.
+    }
+}
+class Solution {
+    public List<List<String>> mostPopularCreator(String[] creators, String[] ids, int[] views) {
+        Map<String,Pair> map=new TreeMap<>();
+        long max=0L;
+   
+        for(int i=0;i<creators.length;i++){
+            if(!map.containsKey(creators[i])){
+             Pair temp=new Pair(creators[i],ids[i],views[i]);
+                map.put(creators[i],temp);
+            }
+            else{
+                Pair temp=map.get(creators[i]);
+               
+                if(temp.maxi<views[i] || (temp.maxi==views[i] && ids[i].compareTo(temp.id)<0)){
+                    temp.id=ids[i];
+                    temp.maxi=views[i];
+                }
+                 temp.view=temp.view+views[i];
+            }
+            max=Math.max(max,map.get(creators[i]).view);
+        }
+       
+        List<List<String>>res=new ArrayList<>();
+        for(Map.Entry<String,Pair> en:map.entrySet()){
+           if(en.getValue().view==max){
+               List<String> ls=new ArrayList<>();
+               ls.add(en.getKey());
+               ls.add(en.getValue().id);
+               res.add(new ArrayList<>(ls));
+           }
+        }
+
+        return res;
+        
+        
+    }
+}
+![image](https://user-images.githubusercontent.com/118106624/201634038-d31da4cd-d12d-40b5-8089-9d483e364562.png)
+		
+**end of question 3**
+**end of DSA medium tasks**			   
