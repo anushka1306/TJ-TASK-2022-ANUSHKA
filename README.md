@@ -129,6 +129,6 @@ class Solution {
         return gcd(b % a, a);
     }
 }
-![2022-11-14](https://user-images.githubusercontent.com/118106624/201597655-36444902-77ce-437f-9031-4f46dcaff89d.png)
+![image](https://user-images.githubusercontent.com/118106624/201597882-04a26fa5-5883-477f-872f-1fae064566f9.png)
 
 **end of question 2**
