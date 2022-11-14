@@ -65,3 +65,68 @@ class powerof2
 ![2022-11-13 (2)](https://user-images.githubusercontent.com/118106624/201517934-b9670c5e-04bf-4738-931c-6c70b675e218.png)
 ![2022-11-13 (3)](https://user-images.githubusercontent.com/118106624/201517944-6de6663e-22cc-4812-adbb-b872f17cefaa.png)
 **end of Question 1**
+**Question 2:**
+class Solution {
+    public int commonFactors(int a, int b) {
+        int n = gcd(a, b);
+ 
+        // Count divisors of n.
+        int result = 0;
+        for (int i = 1; i <= n; i++) {
+            // if 'i' is factor of n
+            if (n % i == 0) {
+                result++;
+            }
+        }
+        return result;
+    }
+    static int gcd(int a, int b){
+        if (a == 0)
+            return b;
+ 
+        return gcd(b % a, a);
+    }
+}
+class Solution {
+    public int commonFactors(int a, int b) {
+        int n = gcd(a, b);
+ 
+        // Count divisors of n.
+        int result = 0;
+        for (int i = 1; i <= n; i++) {
+            // if 'i' is factor of n
+            if (n % i == 0) {
+                result++;
+            }
+        }
+        return result;
+    }
+    static int gcd(int a, int b){
+        if (a == 0)
+            return b;
+ 
+        return gcd(b % a, a);
+    }
+}
+class Solution {
+    public int commonFactors(int a, int b) {
+        int n = gcd(a, b);
+ 
+        // Count divisors of n.
+        int result = 0;
+        for (int i = 1; i <= n; i++) {
+            // if 'i' is factor of n
+            if (n % i == 0) {
+                result++;
+            }
+        }
+        return result;
+    }
+    static int gcd(int a, int b){
+        if (a == 0)
+            return b;
+ 
+        return gcd(b % a, a);
+    }
+}
+**end of question 2**
