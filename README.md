@@ -36,48 +36,6 @@ class Solution {
         return gcd(b % a, a);
     }
 }
-class Solution {
-    public int commonFactors(int a, int b) {
-        int n = gcd(a, b);
- 
-        // Count divisors of n.
-        int result = 0;
-        for (int i = 1; i <= n; i++) {
-            // if 'i' is factor of n
-            if (n % i == 0) {
-                result++;
-            }
-        }
-        return result;
-    }
-    static int gcd(int a, int b){
-        if (a == 0)
-            return b;
- 
-        return gcd(b % a, a);
-    }
-}
-class Solution {
-    public int commonFactors(int a, int b) {
-        int n = gcd(a, b);
- 
-        // Count divisors of n.
-        int result = 0;
-        for (int i = 1; i <= n; i++) {
-            // if 'i' is factor of n
-            if (n % i == 0) {
-                result++;
-            }
-        }
-        return result;
-    }
-    static int gcd(int a, int b){
-        if (a == 0)
-            return b;
- 
-        return gcd(b % a, a);
-    }
-}
 ![image](https://user-images.githubusercontent.com/118106624/201597882-04a26fa5-5883-477f-872f-1fae064566f9.png)
 
 **end of question 2**
