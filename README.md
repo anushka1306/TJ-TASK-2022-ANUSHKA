@@ -81,3 +81,32 @@ class Solution {
 ![image](https://user-images.githubusercontent.com/118106624/201597882-04a26fa5-5883-477f-872f-1fae064566f9.png)
 
 **end of question 2**
+**Question 3:**
+class Solution {
+    public int maximum69Number (int num) {
+        String str = String.valueOf(num);
+        char[] arr = str.toCharArray();
+        for(int i = 0; i< str.length(); i++){
+            if(arr[i] == '6') {
+                arr[i] = '9';
+                break;
+            }
+        }
+        return Integer.parseInt(String.valueOf(arr));
+    }
+}
+![image](https://user-images.githubusercontent.com/118106624/201601166-b7ece586-b815-4dfd-bcae-0fec4c6478f4.png)
+class Solution {
+    public int maximum69Number (int num) {
+        String str = String.valueOf(num);
+        char[] arr = str.toCharArray();
+        for(int i = 0; i< str.length(); i++){
+            if(arr[i] == '6') {
+                arr[i] = '9';
+                break;
+            }
+        }
+        return Integer.parseInt(String.valueOf(arr));
+    }
+}
+**end of question 3**
