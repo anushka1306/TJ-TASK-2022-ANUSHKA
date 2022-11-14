@@ -1,4 +1,5 @@
 # TJ-TASK-2022-ANUSHKA
+**DSA-CP easy tasks:**
 **Question 1:**
 class Solution {
     public boolean isPowerOfTwo(int n) {
@@ -15,6 +16,23 @@ class Solution {
 ![image](https://user-images.githubusercontent.com/118106624/201599415-5e0d28e0-4877-469e-a4c6-6b9cdf32425c.png)
 **end of question 1**
 **Question 2:**
+class Solution {
+    public int findMaxK(int[] nums) {
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < nums.length; i++){
+            set.add(nums[i]);
+			}
+        int ans = -1;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > ans && set.contains(-nums[i]))
+                ans = nums[i];
+        }
+        return ans;
+    }
+}
+![image](https://user-images.githubusercontent.com/118106624/201619880-d7131528-07cd-40f8-925c-cc306bc694d2.png)
+** end of quetion 2 **
+**Question 3:**
 class Solution {
     public int commonFactors(int a, int b) {
         int n = gcd(a, b);
@@ -38,8 +56,8 @@ class Solution {
 }
 ![image](https://user-images.githubusercontent.com/118106624/201597882-04a26fa5-5883-477f-872f-1fae064566f9.png)
 
-**end of question 2**
-**Question 3:**
+**end of question 3**
+**Question 4:**
 class Solution {
     public int maximum69Number (int num) {
         String str = String.valueOf(num);
@@ -67,4 +85,5 @@ class Solution {
         return Integer.parseInt(String.valueOf(arr));
     }
 }
-**end of question 3**
+**end of question 4**
+**end of DSA-CP easy tasks**
